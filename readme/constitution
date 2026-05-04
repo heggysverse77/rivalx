@@ -1,0 +1,267 @@
+# 🎨 Rivalyx – UI Design Constitution (v1)
+
+## 🧠 Design Vision
+
+Rivalyx UI blends **sports competition energy** with **modern dashboard clarity**.
+
+### Style Inspiration:
+
+* MMA / Fight cards
+* Esports dashboards
+* Dark + neon UI
+
+### Core Feel:
+
+* Competitive ⚔️
+* Clean ⚡
+* Bold 🏆
+
+---
+
+## 🎯 Design Principles
+
+1. Action-first UI (always guide next step)
+2. Strong hierarchy (focus on matches & ranking)
+3. Minimal friction (no complex forms)
+4. Dark theme dominance
+5. Real identity → **use profile images (NOT avatars)**
+
+---
+
+## 🎨 Color System
+
+### Base Colors
+
+* Background: `#0B0F14`
+* Card: `#111827`
+* Border: `rgba(255,255,255,0.05)`
+
+---
+
+### Sport Colors (Dynamic)
+
+* Tennis → `#22C55E` (Neon Green)
+* Boxing → `#EF4444` (Red)
+* Running → `#3B82F6` (Blue)
+* Padel → `#A855F7` (Purple)
+
+---
+
+### Status Colors
+
+* Pending → Yellow
+* Accepted → Blue
+* Confirmed → Green
+* Cancelled → Red
+
+---
+
+## 🧭 Navbar
+
+### Structure:
+
+[Logo] Home | Matches | Explore | Profile [Sign In]
+
+### Rules:
+
+* Sticky top
+* Active link highlighted (underline / glow)
+* Profile shows image + dropdown
+
+---
+
+## 🏠 Hero Section
+
+### Layout:
+
+**Left:**
+
+* Title: *Find Your Rival. Prove Your Rank.*
+* Subtitle
+* CTA Button: **Find Opponent**
+
+**Right:**
+
+* Dynamic sport image (swipe / arrows)
+
+---
+
+### Behavior:
+
+* Image changes per sport
+* Background glow changes based on sport color
+
+---
+
+## ⚔️ Active Matches (Core Component)
+
+### Style:
+
+MMA Fight Card
+
+---
+
+### Layout:
+
+[Player A] VS [Player B]
+
+**Each side:**
+
+* Profile Image
+* Username
+* Points
+
+**Center:**
+
+* VS indicator
+
+**Bottom:**
+
+* Status badge
+* Action button:
+
+  * Continue Scheduling
+  * Submit Result
+
+---
+
+### Extras:
+
+* Countdown timer (24h scheduling)
+
+---
+
+## 🔍 Explore Players
+
+### Layout:
+
+Grid system (cards)
+
+---
+
+### Card Content:
+
+* Profile Image
+* Username
+* Points
+* Activity score (progress bar)
+* Verified badge
+
+---
+
+### CTA:
+
+* Challenge button
+
+---
+
+### Filters (Top):
+
+* Sport filter
+* Points range
+* Verified only toggle
+
+---
+
+## 📅 Scheduling Page
+
+### Style:
+
+Minimal + Chat-based
+
+---
+
+### Layout:
+
+**Top:**
+
+* Opponent mini card
+
+**Middle:**
+
+* Proposal history (chat style)
+
+**Bottom:**
+Form:
+
+* Location (text)
+* Date
+* Time
+* Button: Propose
+
+---
+
+### Rules:
+
+* Keep it simple
+* Fast interaction
+* No heavy UI
+
+---
+
+## 👤 Profile Page
+
+### Sections:
+
+* Profile image (editable)
+* Username
+* Sport
+* Points
+* Activity score
+* Match history
+
+---
+
+## 🧩 Components System
+
+Reusable Components:
+
+* Navbar
+* PlayerCard
+* MatchCard
+* StatusBadge
+* Button (primary / secondary)
+* Input fields
+
+---
+
+## ⚡ UI Behavior Rules
+
+* No empty states → show suggestions
+* Always show next action
+* Keep interactions fast
+* Avoid complex forms
+
+---
+
+## 🚀 MVP Design Scope
+
+### Included:
+
+* Hero
+* Navbar
+* Explore
+* Matches
+* Scheduling
+* Profile
+
+---
+
+### Excluded:
+
+* Heavy animations
+* Real 3D engines
+
+---
+
+## ✅ Final Notes
+
+* Use **real images**, not avatars
+* Keep design consistent
+* Focus on clarity over decoration
+
+---
+
+## 📌 Status
+
+This document is the **UI design source of truth** for Rivalyx MVP.
