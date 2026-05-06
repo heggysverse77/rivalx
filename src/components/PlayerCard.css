@@ -1,0 +1,231 @@
+.player-card {
+  background-color: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  min-width: 280px;
+  max-width: 320px;
+  min-height: 480px; /* Force consistent minimum height */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  padding: 1.5rem;
+  background: linear-gradient(145deg, #111827 0%, #0B0F14 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Ensure content is spread evenly */
+}
+
+
+.player-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 20px rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.card-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.player-rank {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #3B82F6;
+  background: rgba(59, 130, 246, 0.1);
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+}
+
+.verified-badge {
+  color: #22C55E;
+  font-size: 1.2rem;
+  filter: drop-shadow(0 0 5px rgba(34, 197, 94, 0.5));
+}
+
+.avatar-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 1.5rem;
+}
+
+.avatar-glow {
+  position: absolute;
+  inset: -5px;
+  background: linear-gradient(45deg, #3B82F6, #22C55E);
+  border-radius: 50%;
+  opacity: 0.4;
+  filter: blur(8px);
+  animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.player-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover; /* Back to cover for consistency */
+  border: 3px solid #111827;
+  position: relative;
+  z-index: 2;
+  background-color: #0B0F14; /* Fallback background */
+}
+
+.player-info {
+  width: 100%;
+  text-align: center;
+  flex-grow: 1; /* Allow info section to take up available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.player-name {
+  font-size: 1.25rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.2rem;
+  background: linear-gradient(to bottom, #fff 0%, #aaa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Clamp to one line */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+.record-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.75rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.record-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.record-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 1px;
+}
+
+.record-value {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.record-item.win .record-value { color: #22C55E; }
+.record-item.loss .record-value { color: #EF4444; }
+
+.record-divider {
+  width: 1px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.player-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.stat-value {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.activity-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activity-percent {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #3B82F6;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3B82F6, #22C55E);
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+.challenge-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(45deg, #3B82F6, #22C55E);
+  border: none;
+  color: #0B0F14;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.challenge-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+  filter: brightness(1.1);
+}

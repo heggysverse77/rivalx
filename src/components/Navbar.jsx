@@ -1,32 +1,33 @@
 import React, { useState } from 'react';
 import './Navbar.css';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
-  const [activeLink, setActiveLink] = useState('Home');
+  const location = useLocation();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   
   // Mock authentication state for demonstration
   const [isAuthenticated, setIsAuthenticated] = useState(true);
 
-  const navItems = ['Home', 'Matches', 'Explore'];
+  const navItems = [
+    { name: 'Home', path: '/home' },
+    { name: 'Matches', path: '/matches' },
+    { name: 'Explore', path: '/explore' }
+  ];
 
   return (
     <nav className="navbar">
       <div className="nav-left">
-        <a href="/" className="logo">Rivalyx<span>.</span></a>
+        <Link to="/home" className="logo">Rivalyx<span>.</span></Link>
         <div className="nav-links">
           {navItems.map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className={`nav-link ${activeLink === item ? 'active' : ''}`}
-              onClick={(e) => {
-                e.preventDefault();
-                setActiveLink(item);
-              }}
+            <Link
+              key={item.name}
+              to={item.path}
+              className={`nav-link ${location.pathname === item.path || (item.name === 'Home' && location.pathname === '/') ? 'active' : ''}`}
             >
-              {item}
-            </a>
+              {item.name}
+            </Link>
           ))}
         </div>
       </div>
@@ -56,6 +57,7 @@ const Navbar = () => {
             )}
           </div>
         ) : (
+
           <button className="sign-in-btn" onClick={() => setIsAuthenticated(true)}>
             Sign In
           </button>

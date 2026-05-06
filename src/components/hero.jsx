@@ -4,6 +4,8 @@ import tennis from '../assets/images/tennis.jpg';
 import boxing from '../assets/images/boxing.jpg';
 import running from '../assets/images/running.jpg';
 import padel from '../assets/images/padel.jpg';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 const sports = [
   {
     name: 'Tennis',
@@ -56,10 +58,14 @@ const Hero = () => {
           <p className="hero-subtitle">
             {currentSport.subtitle}
           </p>
-          <button className="hero-cta">
+          <Link to= '/explore' >
+          
+          <button className="hero-cta" onClick={() => navigate("/explore")}>
             Find Opponent
             <span className="cta-icon">⚔️</span>
           </button>
+          </Link>
+
           
           <div className="sport-indicators">
             {sports.map((_, index) => (
